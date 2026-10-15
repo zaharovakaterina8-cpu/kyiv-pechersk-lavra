@@ -1,0 +1,114 @@
+.footer {
+    background: #1c3025;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-logo {
+    color: #e2c78f;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+}
+
+.copyright {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/* ===== АДАПТАЦІЯ ДЛЯ ТЕЛЕФОНІВ ===== */
+
+@media (max-width: 800px) {
+    .section {
+        padding: 75px 0;
+    }
+
+    .navigation {
+        padding: 17px 0;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .navigation nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 22px;
+    }
+
+    .hero {
+        min-height: 560px;
+    }
+
+    .hero::after {
+        width: 250px;
+        height: 250px;
+        right: -100px;
+        opacity: 0.5;
+    }
+
+    .history-grid,
+    .facts-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .architecture-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .architecture-visual {
+        min-height: 340px;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        width: 88%;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .history-card {
+        padding: 28px 23px;
+    }
+
+    .architecture-visual {
+        min-height: 290px;
+    }
+
+    .architecture-frame p {
+        font-size: 18px;
+    }
+}
+
+
+/* ===== ЗМЕНШЕННЯ АНІМАЦІЙ ЗА ПОТРЕБИ ===== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
